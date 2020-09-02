@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_bg_shape"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提示"
+            android:textColor="@color/bleglasses_main_top_bg_color"
+            android:textSize="18dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appupdateveriontv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/app_update_verion_info_text"
+            android:textColor="@color/time_selected_text_color"
+            android:maxLines="1"
+            android:autoSizeMaxTextSize="16dp"
+            android:autoSizeTextType="uniform"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/updatenewappversionbtn"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@drawable/res_round_blue_4"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="下载更新"
+            android:textColor="@color/bleglasses_main_bg_color"
+            android:textSize="18dp" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/noupdatenewappversionbtn"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:background="@drawable/res_round_blue_4"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="关闭"
+            android:visibility="gone"
+            android:textColor="@color/bleglasses_main_bg_color"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background">
+
+    <LinearLayout
+        android:id="@+id/toolbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/bleglasses_main_top_bg_color"
+        android:gravity="bottom"
+        android:paddingTop="5dp">
+
+        <include layout="@layout/fragment_review_data_header_layout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#f6f7f8"
+        >
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="20dp"
+            android:background="@color/res_color_blue_374cff"
+            android:layout_gravity="center_vertical"
+            ></View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_mine_4"
+            android:textColor="@color/res_color_blue_374cff"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            ></TextView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_lead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <com.zj.zhijue.view.circleimageview.CircleImageView
+            android:id="@+id/civ_lead_headimg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/qidongtubiao"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_lead_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            tools:text="sdfsdf"
+            android:textColor="@color/toolbar_title_text_color"
+            android:layout_toRightOf="@+id/civ_lead_headimg"
+            android:layout_alignTop="@+id/civ_lead_headimg"
+            android:layout_marginLeft="@dimen/dp_10"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/tv_lead_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="185123456"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/toolbar_title_text_color"
+            android:layout_toRightOf="@+id/civ_lead_headimg"
+            android:layout_alignBottom="@+id/civ_lead_headimg"
+            android:layout_marginLeft="@dimen/dp_10"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/tv_lead_lable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总购买时长"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/toolbar_title_text_color"
+            android:layout_alignTop="@+id/civ_lead_headimg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/tv_lead_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/toolbar_title_text_color"
+            android:layout_alignBottom="@+id/civ_lead_headimg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            ></TextView>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#f6f7f8"
+        >
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="20dp"
+            android:background="@color/res_color_blue_374cff"
+            android:layout_gravity="center_vertical"
+            ></View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_mine_5"
+            android:textColor="@color/res_color_blue_374cff"
+            android:textSize="@dimen/sp_14"
+            android:layout_marginLeft="15dp"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+            ></TextView>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        />
+
+</LinearLayout>

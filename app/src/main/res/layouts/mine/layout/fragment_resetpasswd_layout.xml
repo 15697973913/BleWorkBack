@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myChart="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/bleglasses_main_top_bg_color"
+        android:gravity="bottom"
+        android:paddingTop="5dp">
+
+        <include layout="@layout/fragment_integral_header_layout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="@color/blelgasses_main_control_view_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingRight="20dp"
+        android:visibility="visible">
+
+        <!-- 输入旧密码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/old_passwd_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/ic_regist_pwd"
+                    android:drawablePadding="10dp"
+                    android:hint="请输入旧密码"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/time_selected_text_color"
+                    android:textColorHint="@color/bleglasses_register_hint_text_color"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="@dimen/account_with_passwd_login_text_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:gravity="bottom|right"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/passwd_visiablebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="@dimen/register_send_verify_code_text_size"
+                    android:autoSizeMinTextSize="12dp"
+                    android:background="@null"
+                    android:gravity="center_vertical|right"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:scaleType="fitCenter"
+                    android:src="@mipmap/mima_yaoshi"
+                    android:textColor="@color/bleglasses_register_hint_text_color"
+                    android:textSize="@dimen/register_send_verify_code_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bleglasses_register_divide_line_color" />
+
+        <!-- 第一次输入密码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/new_first_passwd_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/ic_regist_pwd"
+                    android:drawablePadding="10dp"
+                    android:hint="请输入新密码"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/time_selected_text_color"
+                    android:textColorHint="@color/bleglasses_register_hint_text_color"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="@dimen/account_with_passwd_login_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bleglasses_register_divide_line_color" />
+
+
+        <!-- 第二次输入新密码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|bottom"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/new_confirm_passwd_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/ic_regist_pwd"
+                    android:drawablePadding="10dp"
+                    android:hint="请再次输入新密码"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/time_selected_text_color"
+                    android:textColorHint="@color/bleglasses_register_hint_text_color"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="@dimen/account_with_passwd_login_text_size" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/bleglasses_register_divide_line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_horizontal|bottom">
+
+            <Button
+                android:id="@+id/resetpasswdsurebtn"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/res_round_blue_4"
+                android:text="确认修改"
+                android:textColor="@color/top_unsignin_text_color"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5" />
+
+    </LinearLayout>
+
+</LinearLayout>

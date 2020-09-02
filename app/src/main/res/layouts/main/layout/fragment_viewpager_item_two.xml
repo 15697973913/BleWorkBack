@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myChart="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_single"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:minHeight="800dp"
+        android:orientation="vertical">
+
+        <!--        <LinearLayout
+                    android:id="@+id/train_data_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:textColor="@color/time_selected_text_color"
+                        android:text="本周训练："/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/trainweekhouttv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:textColor="@color/train_status_disconnect_text_color"
+                        android:text="20"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:textColor="@color/time_selected_text_color"
+                        android:text="小时"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/trainweekmintv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:textColor="@color/train_status_disconnect_text_color"
+                        android:text="15"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18dp"
+                        android:textColor="@color/time_selected_text_color"
+                        android:text="分"/>
+
+
+                </LinearLayout>-->
+
+        <com.zj.zhijue.view.NewWeekView
+            android:id="@+id/my_single_chart_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/train_data_layout"
+            android:layout_below="@id/train_data_layout"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="40dp"
+            myChart:leftColor="@color/leftColor"
+            myChart:leftColorBottom="@color/bleglasses_form_report_week_dy_height__color"
+            myChart:selectLeftColor="@color/bleglasses_form_report_week_dy_height__color"
+            myChart:xyColor="@color/xyColor" />
+
+        <RelativeLayout
+            android:id="@+id/controllaout"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_alignLeft="@id/my_single_chart_view"
+            android:layout_alignRight="@id/my_single_chart_view"
+            android:layout_alignBottom="@id/my_single_chart_view"
+            android:layout_marginLeft="37dp"
+            android:layout_marginRight="17dp"
+            android:gravity="center_vertical"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/leftimage"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/zuo"
+                android:tint="@color/login_title_text_color" />
+
+            <ImageView
+                android:id="@+id/rightimage"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/you"
+                android:tint="@color/login_title_text_color" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/train_data_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="0dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本周训练："
+                android:textColor="@color/time_selected_text_color"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trainweekhouttv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="20"
+                android:textColor="@color/train_status_disconnect_text_color"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="小时"
+                android:textColor="@color/time_selected_text_color"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/trainweekmintv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="15"
+                android:textColor="@color/train_status_disconnect_text_color"
+                android:textSize="18dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分"
+                android:textColor="@color/time_selected_text_color"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

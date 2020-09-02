@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center_vertical|left">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/trainyeardatespinner"
+            style="@style/trainmode_spinner_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:dropDownWidth="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="13dp"
+            android:spinnerMode="dropdown" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/yearleft"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/zuo"
+                android:tint="@color/login_title_text_color" />
+
+            <TextView
+                android:id="@+id/yeartext"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:text="2018"
+                android:textColor="@color/time_selected_text_color"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/yearright"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/you"
+                android:tint="@color/login_title_text_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/monthleft"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/zuo"
+                android:tint="@color/login_title_text_color" />
+
+            <TextView
+                android:id="@+id/monthtext"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:text="2018"
+                android:textColor="@color/time_selected_text_color"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/monthright"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/you"
+                android:tint="@color/login_title_text_color" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

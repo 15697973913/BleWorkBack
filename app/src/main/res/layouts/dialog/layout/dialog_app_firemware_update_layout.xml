@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/mainrelativelayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <include layout="@layout/dialog_app_firemware_update_content" android:visibility="visible" android:id="@+id/showstopdialog" />
+        <include layout="@layout/dialog_default_view" android:visibility="gone" android:id="@+id/stop_glasses_progress"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

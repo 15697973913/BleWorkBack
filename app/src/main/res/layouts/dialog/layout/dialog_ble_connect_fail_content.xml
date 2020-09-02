@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeMaxTextSize="@dimen/ble_connect_status_deviceid_text_size"
+            android:autoSizeMinTextSize="@dimen/ble_connect_status_deviceid_min_text_size"
+            android:text="@string/ble_connect_fail_text"
+            android:textColor="@color/train_status_disconnect_text_color"
+            android:textSize="@dimen/ble_connect_status_deviceid_text_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ble_connect_fail_device_nametv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:autoSizeMaxTextSize="@dimen/ble_connect_status_deviceid_text_size"
+            android:autoSizeMinTextSize="@dimen/ble_connect_status_deviceid_min_text_size"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="123456789"
+            android:textColor="@color/bleglasses_main_top_bg_color"
+            android:textSize="@dimen/ble_connect_status_deviceid_text_size" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ble_connect_fail_deviceidtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:autoSizeMaxTextSize="@dimen/ble_connect_status_deviceid_text_size"
+            android:autoSizeMinTextSize="@dimen/ble_connect_status_deviceid_min_text_size"
+            android:autoSizeTextType="uniform"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:text="123456789"
+            android:textColor="@color/bleglasses_main_top_bg_color"
+            android:textSize="@dimen/ble_connect_status_deviceid_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ble_connect_success_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/lianjieshibai" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right">
+
+            <Button
+                android:id="@+id/ble_connect_fail_retry_btn"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:background="@drawable/res_round_blue_28"
+                android:text="重新连接"
+                android:textColor="@color/top_unsignin_text_color"
+                android:textSize="@dimen/ble_scan_button_text_size" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left">
+
+            <Button
+                android:id="@+id/ble_connect_fail_cancel_btn"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:background="@drawable/res_round_gray_28"
+                android:text="取消"
+                android:textColor="#999999"
+                android:textSize="@dimen/ble_scan_button_text_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPridmary" tools:ignore="ResourceName">#3A5AFD</color>
+    <color name="colorPrimaryDark" tools:ignore="ResourceName">#3A5AFD</color>
+    <color name="colorAccent" tools:ignore="ResourceName">#3A5AFD</color>
+    <color name="bg_color" tools:ignore="ResourceName">#ededed</color>
+    <color name="bg_gray" tools:ignore="ResourceName">#f2f2f2</color>
+    <color name="bg_grey" tools:ignore="ResourceName">#f2f2f2</color>
+    <color name="black" tools:ignore="ResourceName">#ff000000</color>
+    <color name="blue" tools:ignore="ResourceName">#6bacf4</color>
+    
+    <!-- 登录-->
+    
+
+    <color name="login_title" tools:ignore="ResourceName">#333333</color>
+    <color name="login_account_text_color" tools:ignore="ResourceName">#666666</color>
+    <color name="login_background" tools:ignore="ResourceName">#f6f6f6</color>
+    <color name="login_phone_click" tools:ignore="ResourceName">#4996fe</color>
+    <color name="confirm_connect_text_color" tools:ignore="ResourceName">#345efe</color>
+    
+    
+    <color name="id_card_number" tools:ignore="ResourceName">#b0b0b0</color>
+    <color name="control_main_color" tools:ignore="ResourceName">#f2f2f2</color>
+    <color name="control_selected_scenario" tools:ignore="ResourceName">#999999</color>
+    <color name="control_intervene_text_color" tools:ignore="ResourceName">#649ffe</color>
+
+    <!-- 新版本 UI  -->
+
+    <color name="main_background_color" tools:ignore="ResourceName">#ffffff</color>
+    <color name="assit_almost_button_color" tools:ignore="ResourceName">#0BA6F1</color>
+    <color name="assit_all_edit_background_color" tools:ignore="ResourceName">#F1F1F1</color>
+    <color name="assit_view_division_color" tools:ignore="ResourceName">#F6F6F6</color>
+    
+    <color name="time_selected_text_color" tools:ignore="ResourceName">#000000</color>
+    <color name="toolbar_title_text_color" tools:ignore="ResourceName">#333333</color>
+    <color name="main_body_text_color" tools:ignore="ResourceName">#666666</color>
+    <color name="unclickable_text_color" tools:ignore="ResourceName">#999999</color>
+
+    <color name="green_light_color" tools:ignore="ResourceName">#3BC06B</color>
+    <color name="blue_dark_color" tools:ignore="ResourceName">#04BFCE</color>
+    <color name="blue_light_color" tools:ignore="ResourceName">#D2F0FF</color>
+    <color name="orange_light_color" tools:ignore="ResourceName">#FFBE26</color>
+    <color name="red_dard_color" tools:ignore="ResourceName">#FC5B24</color>
+    <color name="blue_light_translate_color" tools:ignore="ResourceName">#EEF9FF</color>
+    <color name="red_dard_hard_color" tools:ignore="ResourceName">#F12528</color>
+    <color name="green_light_translate_color" tools:ignore="ResourceName">#19D88B</color>
+
+    <color name="next_text_color" tools:ignore="ResourceName">#EEEEEE</color>
+
+    
+    <color name="nuoyafangzhou_title_text_color" tools:ignore="ResourceName">#333333</color>
+    <color name="gray" tools:ignore="ResourceName">#f9a4a3a3</color>
+
+
+    <!-- 周视图-->
+    <color name="leftColor" tools:ignore="ResourceName">#a1de89</color>
+    <color name="rightColor" tools:ignore="ResourceName">#f7e494</color>
+    <color name="rightBottomColor" tools:ignore="ResourceName">#f7d194</color>
+    <color name="leftColorBottom" tools:ignore="ResourceName">#550BA6F1</color>
+    <color name="backgroundlineColor" tools:ignore="ResourceName">#110BA6F1</color>
+    <color name="selectLeftColor" tools:ignore="ResourceName">#0BA6F1</color>
+    <color name="selectRightColor" tools:ignore="ResourceName">#f8935c</color>
+    <color name="xyColor" tools:ignore="ResourceName">#999</color>
+
+    <!-- 7天签到View-->
+
+    <color name="arsc_circle_color" tools:ignore="ResourceName">#F6F6F6</color>
+    <color name="top_unsignin_circle_color" tools:ignore="ResourceName">#990BA6F1</color>
+    <color name="top_signin_circle_color" tools:ignore="ResourceName">#0BA6F1</color>
+    <color name="top_unsignin_text_color" tools:ignore="ResourceName">#FFFFFF</color>
+    <color name="top_signin_text_color" tools:ignore="ResourceName">#FFFFFF</color>
+    <color name="center_unsignin_inner_circle_color" tools:ignore="ResourceName">#CCCCCC</color>
+    <color name="center_signin_inner_circle_color" tools:ignore="ResourceName">#FFFFFF</color>
+    <color name="center_unsignin_hollow_circle_color" tools:ignore="ResourceName">#F6F6F6</color>
+    <color name="center_signin_hollow_circle_color" tools:ignore="ResourceName">#0BA6F1</color>
+    <color name="bottom_text_color" tools:ignore="ResourceName">#333333</color>
+    <color name="operation_stop_circle_color" tools:ignore="ResourceName">#ff0a0a</color>
+    <color name="operation_pause_circle_color" tools:ignore="ResourceName">#0BA6F1</color>
+    <color name="operation_ganyu_circle_color" tools:ignore="ResourceName">#0EC3D1</color>
+    <color name="bleglasses_form_report_week_dy_height__color" tools:ignore="ResourceName">#e5e5e5</color>
+
+    <color name="month_view_other_date_text_color" tools:ignore="ResourceName">#e5e5e5</color>
+    
+
+
+
+    
+</resources>

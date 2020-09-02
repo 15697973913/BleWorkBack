@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical" >
+
+   <LinearLayout
+       android:id="@+id/backlayout"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:gravity="left|center_vertical"
+       android:layout_centerVertical="true"
+       android:layout_alignParentLeft="true">
+
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/fanhui"
+           android:layout_marginLeft="5dp"
+           android:visibility="invisible"/>
+
+       <com.zj.zhijue.view.BatteryView
+           android:id="@+id/batteryview"
+           android:layout_width="25dp"
+           android:layout_height="11dp"
+           app:battery_left="0dp"
+           app:battery_top="0dp"
+           app:battery_width = "23dp"
+           app:battery_height="10dp"
+           app:outer_rect_line_width="2px"
+           app:battery_head_width="2dp"
+           app:batterlevel= "0"
+           app:battery_head_height="4dp"
+           app:battery_inside_margin="2dp"
+           app:outer_rect_color="@color/battery_color"
+           app:inner_rect_color="@color/battery_color"
+           android:layout_marginLeft="0dp"
+           android:visibility="invisible"/>
+
+       <androidx.appcompat.widget.AppCompatTextView
+           android:id="@+id/batterytv"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:gravity="center"
+           android:textSize="10dp"
+           android:textColor="@color/bleglasses_main_control_title"
+           android:layout_marginLeft="3dp"
+           android:text=""
+           android:visibility="invisible"/>
+
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名 "
+            android:autoSizeTextType="none"
+            android:gravity="center"
+            android:textSize="@dimen/blelgasses_control_title_text_size"
+            android:textColor="@color/bleglasses_main_control_title"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/trainusernametext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="木木"
+            android:autoSizeTextType="none"
+            android:gravity="center"
+            android:textSize="@dimen/blelgasses_control_title_text_size"
+            android:textColor="@color/bleglasses_main_control_title"/>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/disconnectlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|right"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/guanbi"
+            android:layout_marginRight="20dp"/>
+    </LinearLayout>
+
+</RelativeLayout>

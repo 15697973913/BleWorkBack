@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:myChart="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/bleglasses_main_top_bg_color"
+        android:gravity="bottom"
+        android:paddingTop="5dp">
+
+        <include layout="@layout/fragment_review_data_header_layout" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/toolbar_title_text_color"
+            android:textSize="@dimen/sp_16"
+            android:text="版本信息"></TextView>
+
+        <TextView
+            android:id="@+id/tv_set_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="V1.1"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/main_body_text_color"
+            android:layout_marginRight="@dimen/dp_10"
+            ></TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jiantou"
+            ></ImageView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/next_text_color"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_set_firmware"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/toolbar_title_text_color"
+            android:textSize="@dimen/sp_16"
+            android:text="固件更新"></TextView>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jiantou"
+            ></ImageView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/next_text_color"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_set_software"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/toolbar_title_text_color"
+            android:textSize="@dimen/sp_16"
+            android:text="软件更新"></TextView>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jiantou"
+            ></ImageView>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/next_text_color"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/toolbar_title_text_color"
+            android:textSize="@dimen/sp_16"
+            android:text="调试模式"></TextView>
+
+
+        <com.zj.zhijue.view.CustomSwitch
+            android:id="@+id/cs_debug"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            app:closeColor="#F1F5F9"
+            app:openColor="#4CD964"
+            tools:ignore="MissingConstraints"
+            android:layout_marginRight="15dp"/>
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/next_text_color"></View>
+
+    <!-- 校准模式 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/toolbar_title_text_color"
+            android:textSize="@dimen/sp_16"
+            android:text="校准模式"></TextView>
+
+
+        <com.zj.zhijue.view.CustomSwitch
+            android:id="@+id/csCalibrationMode"
+            android:layout_width="55dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            app:closeColor="#F1F5F9"
+            app:openColor="#4CD964"
+            tools:ignore="MissingConstraints"
+            android:layout_marginRight="15dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/next_text_color"></View>
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="安全退出"
+        android:textColor="@color/confirm_connect_text_color"
+        android:textSize="18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:background="@drawable/bg_custom_data_select_default1"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        ></TextView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="#BCC8D7"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:lineSpacingExtra="5dp"
+        android:text="Copyright©2019-2025\n深圳市卓佳实业有限公司"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

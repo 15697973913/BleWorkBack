@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bleglasses_main_bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp">
+
+        <include layout="@layout/register_toolbar_content" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bleglasses_register_divide_line_color" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_rect_fad961_to_f76b1c_round"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_regist_bg"></ImageView>
+
+            <!--        android:src="@mipmap-xhdpi/ic_regist_bg"-->
+
+            <!--- 手机号 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_rect_white_round_5"
+                android:gravity="center_horizontal|bottom"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/register_phoneedittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/ic_regist_phone"
+                    android:drawablePadding="10dp"
+                    android:hint="请输入手机号"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:textColor="@color/time_selected_text_color"
+                    android:textColorHint="@color/bleglasses_register_hint_text_color"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="@dimen/account_with_passwd_login_text_size" />
+
+            </LinearLayout>
+
+            <!--- 验证码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_rect_white_round_5"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/register_verifycode_edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/ic_regist_sms"
+                    android:drawablePadding="10dp"
+                    android:hint="请输入短信验证码"
+                    android:inputType="phone"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:textColor="@color/time_selected_text_color"
+                    android:textColorHint="@color/bleglasses_register_hint_text_color"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="@dimen/account_with_passwd_login_text_size" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/register_verifycode_buttton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="@dimen/register_send_verify_code_text_size"
+                    android:autoSizeMinTextSize="12dp"
+                    android:background="@null"
+                    android:maxLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="获取验证码"
+                    android:textColor="@color/bleglasses_register_hint_text_color"
+                    android:textSize="@dimen/register_send_verify_code_text_size" />
+            </LinearLayout>
+
+
+            <!-- 第一次输入密码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_rect_white_round_5"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/register_first_passwd_edittext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/ic_regist_pwd"
+                    android:drawablePadding="10dp"
+                    android:hint="设置密码，6到12位"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:textColor="@color/time_selected_text_color"
+                    android:textColorHint="@color/bleglasses_register_hint_text_color"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="@dimen/account_with_passwd_login_text_size" />
+
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/passwd_visiablebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:button="@mipmap/buxianshi"
+                    android:checked="false"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:scaleType="fitCenter" />
+
+
+            </LinearLayout>
+
+
+            <!-- 第二次输入密码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_rect_white_round_5"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/register_second_passwd_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/ic_regist_pwd"
+                    android:drawablePadding="10dp"
+                    android:hint="请再次输入密码"
+                    android:inputType="textPassword"
+                    android:maxLength="12"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:textColor="@color/time_selected_text_color"
+                    android:textColorHint="@color/bleglasses_register_hint_text_color"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="@dimen/account_with_passwd_login_text_size" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_rect_white_round_5"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/edRecommender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/ic_regist_sms"
+                    android:drawablePadding="10dp"
+                    android:hint="请输入邀请人手机号"
+                    android:maxLines="1"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_10"
+                    android:textColor="@color/time_selected_text_color"
+                    android:textColorHint="@color/bleglasses_register_hint_text_color"
+                    android:textCursorDrawable="@drawable/cursor_color"
+                    android:textSize="@dimen/account_with_passwd_login_text_size" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/grantedcheckbox"
+                        style="@style/protolstatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="8dp"
+                        android:checked="false"
+                        android:gravity="center" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/login_protocoltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/tip_with_login_register_user_protocol"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/login_with_tip_protocol_text_size" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="20dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/register_complete_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:background="@drawable/shape_rect_white_round_5"
+                    android:gravity="center"
+                    android:text="立即注册"
+                    android:textColor="@color/toolbar_title_text_color"
+                    android:textSize="@dimen/register_send_verify_code_text_size" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

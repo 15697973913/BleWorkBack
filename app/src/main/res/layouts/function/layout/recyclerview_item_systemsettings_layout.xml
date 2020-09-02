@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/systemsettings_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <ImageView
+            android:id="@+id/systemsetings_prefix_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/banbengengxin" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/function_system_settings_recyclerview_item_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="版本信息"
+                android:textColor="@color/time_selected_text_color"
+                android:textSize="@dimen/function_common_proble_text_size" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/currentversion_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="@dimen/system_settings_version_text_size"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/time_selected_text_color"
+                android:textSize="@dimen/system_settings_version_text_size"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/systemsettings_item_sufiximg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/jiantou"
+                android:visibility="gone"/>
+    
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/debugmodeswitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/switch_ios_thumb"
+                android:track="@drawable/switch_ios_track_selector"
+                android:checked="true"
+                android:layout_marginRight="15dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

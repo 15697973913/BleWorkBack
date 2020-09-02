@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:padding="15dp"
+    android:background="@color/white"
+    >
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="消耗时长"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/toolbar_title_text_color"
+        ></TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="right"
+        >
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-2小时"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/toolbar_title_text_color"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020-06-21 18:24"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/unclickable_text_color"
+            android:layout_marginTop="@dimen/dp_10"
+            ></TextView>
+
+    </LinearLayout>
+</LinearLayout>

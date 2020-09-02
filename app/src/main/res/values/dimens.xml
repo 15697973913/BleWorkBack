@@ -1,0 +1,70 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="login_title_text_size">18dp</dimen>
+
+    <dimen name="login_account_text_size">20dp</dimen>
+    <dimen name="login_left_bottom_text_size">15dp</dimen>
+    <dimen name="agree_service_tip_text_size">16dp</dimen>
+    <dimen name="verification_code_text_size">17dp</dimen>
+    <dimen name="phone_number_text_size">16dp</dimen>
+    <dimen name="retry_send_verification_tip_text">15dp</dimen>
+    <dimen name="author_type_text_size">14dp</dimen>
+    <dimen name="author_type_item_size">18dp</dimen>
+    <dimen name="confirm_connect_text_size">12dp</dimen>
+    <dimen name="current_selected_scenario_mode_text_size">23dp</dimen>
+
+    <!-- 欢迎使用 登录-->
+    <dimen name="nuoyafangzhou_text_size">19dp</dimen>
+    <dimen name="login_with_phone_welcome_text_size">22dp</dimen>
+    <dimen name="please_input_your_phone_text_size">18dp</dimen>
+    <dimen name="login_with_register_text_size">15dp</dimen>
+    <dimen name="account_with_passwd_login_text_size">14dp</dimen>
+    <dimen name="login_with_tip_protocol_text_size">15dp</dimen>
+    <dimen name="login_with_phone_welcome_margin_left">15dp</dimen>
+    <dimen name="dialog_title_text_size">18dp</dimen>
+    <dimen name="fragment_train_title_text_size">14dp</dimen>
+    <dimen name="fragment_signin_phone_text_size">12dp</dimen>
+    <dimen name="train_yesterday_top_size">14dp</dimen>
+    <dimen name="train_yesterday_hour_size">25dp</dimen>
+    <dimen name="train_yesterday_hour_per_size">10dp</dimen>
+    <dimen name="mine_personinfo_item_text_size">18dp</dimen>
+    <dimen name="mine_common_problem_content_text_size">15dp</dimen>
+    <dimen name="mine_common_problem_title_text_size">16dp</dimen>
+    <dimen name="train_week_tip_text_size">12dp</dimen>
+    <dimen name="train_week_tip_text_paddingbottom_size">5dp</dimen>
+    <dimen name="train_month_bottom_text_size">12dp</dimen>
+    <dimen name="train_month_bottom_max_text_size">15dp</dimen>
+    <dimen name="train_month_bottom_min_text_size">8dp</dimen>
+    <dimen name="button_pause_text_size">18dp</dimen>
+    <dimen name="button_stop_text_size">14dp</dimen>
+    <dimen name="user_agreement_text_size">13dp</dimen>
+    <dimen name="award_fragment_time_text">14dp</dimen>
+    <dimen name="award_fragment_rules_text">18dp</dimen>
+    <dimen name="award_fragment_content_text">15dp</dimen>
+    <dimen name="contact_customer_service_msg_text_size">14dp</dimen>
+    
+    <dimen name="register_title_text_size">18dp</dimen>
+    <dimen name="register_input_phone_text_size">15dp</dimen>
+    <dimen name="register_send_verify_code_text_size">15dp</dimen>
+    <dimen name="optometry_center_text_size">14dp</dimen>
+    <dimen name="optometry_center_tip_text_size">13dp</dimen>
+    <dimen name="register_tip_success_text_size">14dp</dimen>
+    <dimen name="train_mode_title_text_size">22dp</dimen>
+    <dimen name="ble_scan_button_text_size">16dp</dimen>
+    <dimen name="ble_input_device_id_text_size">18dp</dimen>
+
+    <dimen name="ble_connect_status_deviceid_text_size">18dp</dimen>
+    <dimen name="ble_connect_status_deviceid_min_text_size">12dp</dimen>
+    <dimen name="function_common_proble_text_size">16dp</dimen>
+    <dimen name="system_settings_version_text_size">14dp</dimen>
+    <dimen name="mine_recyclerview_item_text_size">16dp</dimen>
+
+    <dimen name="blelgasses_control_title_text_size">12dp</dimen>
+    <dimen name="blelgasses_train_mode_item_text_size">12dp</dimen>
+    <dimen name="feedback_button_text_size">18dp</dimen>
+
+
+
+</resources>

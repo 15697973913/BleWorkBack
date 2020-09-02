@@ -1,0 +1,471 @@
+import org.apache.tools.ant.taskdefs.condition.Os
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'AndResGuard'
+
+greendao {
+    schemaVersion 5  //版本
+    daoPackage rootProject.ext.android.applicationId + '.glasses.greendao.msdao'
+    // 一般为app包名+生成文件的文件夹名
+    targetGenDir 'src/main/java' //生成文件路径
+}
+
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('yyMMdd', TimeZone.getTimeZone("UTC"))
+    return formattedDate
+}
+
+
+android {
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    //批量修改生成的apk文件名
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def channel = variant.productFlavors[0].name
+
+                if ('debug'.equals(variant.buildType.name)) {
+                    def apkFile = applicationId + "_" + versionName + "_" + versionCode + "_" + buildTime() + "_" + channel + "_d.apk"
+                    outputFileName = new File(outputFile.parent, apkFile).name
+                } else if ('release'.equals(variant.buildType.name)) {
+                    def apkFile = applicationId + "_" + versionName + "_" + versionCode + "_" + buildTime() + "_" + channel + "_r.apk"
+                    outputFileName = new File(outputFile.parent, apkFile).name
+                }
+            }
+        }
+    }
+
+
+//    def cmd = ''
+//    def gitdescribe = ''
+//    def debug_gradle = ''
+//    def git_release_version = ''
+//    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+//        cmd = 'git rev-list HEAD --count'
+//        gitdescribe = "git describe "
+//        git_release_version = 'git describe --tags --always --abbrev=0'
+//    } else {
+//        cmd = 'git rev-list HEAD --count'
+//        gitdescribe = 'git describe --long'
+//        git_release_version = 'git describe --tags --always --abbrev=0'
+//        debug_gradle = System.getenv('DEBUG_GRADLE')
+//        System.out.println(debug_gradle)
+//    }
+//
+//    def versionfile = new File('./app/src/main/assets/commit-msg.txt')
+//    versionfile.text = gitdescribe.execute([], project.rootDir).text.trim()
+//    System.out.println("gitdescribe is: " + gitdescribe.execute([], project.rootDir).text.trim())
+//    def gitTagVersion = git_release_version.execute([], project.rootDir).text.trim()
+//    def gitVersionStr = cmd.execute([], project.rootDir).text.trim()
+//
+//    if (null == gitTagVersion || gitTagVersion.trim().length() == 0) {
+//        gitTagVersion = rootProject.ext.android.versionName
+//    }
+//
+//    def gitVersion = null
+//    if (null == gitVersionStr || gitVersionStr.length() == 0) {
+//        gitVersion = rootProject.ext.android.versionCode
+//    } else {
+//        gitVersion = gitVersionStr.toInteger()
+//    }
+//
+//    System.out.println("gitTagVersion:" + gitTagVersion)
+//    System.out.println("gitVersion:" + gitVersion)
+
+
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "V2.0"
+        flavorDimensions String.valueOf(versionCode)
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            // Specifies the ABI configurations of your native
+            // libraries Gradle should build and package with your APK.
+            stl "c++_static"
+            abiFilters "armeabi-v7a", "arm64-v8a"
+            ldLibs 'log'
+            cFlags '-DMY_LOG_LEVEL=LOG_VERBOSE'
+        }
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        multiDexEnabled true
+
+        packagingOptions {
+            doNotStrip '*/mips/*.so'
+            doNotStrip '*/mips64/*.so'
+        }
+
+        //极光
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "9e3f171416d6ac4d115b8756", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    //签名
+    if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+        def props = new Properties()
+        def build_property = "F:/release_android_signed_key/BleGlasses_Release_Sign.properties"
+        def file_exist = file(build_property).exists()
+        System.out.println(" file exist is:" + file_exist)
+        if (file_exist) {
+            file(build_property).withInputStream { props.load(it) }
+            def release_storefile = props.getProperty("bleglasses_release_singn_key_storefile")
+            def release_keyalias = props.getProperty("bleglasses_release_singn_key_keyalias")
+            def release_storepassword = props.getProperty("bleglasses_release_singn_key_storepassword")
+            def release_keypassword = props.getProperty("bleglasses_release_singn_key_keypassword")
+            if (release_storefile) {
+                System.out.println(release_storefile)
+                System.out.println(release_keyalias)
+                System.out.println(release_keypassword)
+                signingConfigs {
+                    release {
+                        storeFile file(release_storefile)
+                        keyAlias release_keyalias
+                        storePassword release_storepassword
+                        keyPassword release_keypassword
+                    }
+                    debug {
+                        storeFile file(release_storefile)
+                        keyAlias release_keyalias
+                        storePassword release_storepassword
+                        keyPassword release_keypassword
+                    }
+                }
+                System.out.println(signingConfigs)
+            } else {
+                signingConfigs {
+                    release {
+                        storeFile file("../singed_keys/debug_signed.jks")
+                        keyAlias "debug_smarteye"
+                        storePassword "123456"
+                        keyPassword "123456"
+                    }
+//                    debug {
+//                        storeFile file("../singed_keys/debug_signed.jks")
+//                        keyAlias "debug_smarteye"
+//                        storePassword "123456"
+//                        keyPassword "123456"
+//                    }
+                }
+
+                System.out.println(signingConfigs)
+                System.out.println("could not find build.properties use default key")
+            }
+        } else {
+            signingConfigs {
+                release {
+                    storeFile file("../singed_keys/debug_signed.jks")
+                    keyAlias "debug_smarteye"
+                    storePassword "123456"
+                    keyPassword "123456"
+                }
+                debug {
+                    storeFile file("../singed_keys/debug_signed.jks")
+                    keyAlias "debug_smarteye"
+                    storePassword "123456"
+                    keyPassword "123456"
+                }
+            }
+        }
+    } else {
+        def props = new Properties()
+        def build_property = "/Volumes/H_Work/android_release_signature_fiiels/android_keystore/BleGlasses_Release_Sign_Mac.properties"
+        def file_exist = file(build_property).exists()
+        System.out.println(" file exist is:" + file_exist)
+        if (file_exist) {
+            file(build_property).withInputStream { props.load(it) }
+            def release_storefile = props.getProperty("bleglasses_release_singn_key_storefile")
+            def release_keyalias = props.getProperty("bleglasses_release_singn_key_keyalias")
+            def release_storepassword = props.getProperty("bleglasses_release_singn_key_storepassword")
+            def release_keypassword = props.getProperty("bleglasses_release_singn_key_keypassword")
+            if (release_storefile) {
+                System.out.println(release_storefile)
+                System.out.println(release_keyalias)
+                System.out.println(release_keypassword)
+                signingConfigs {
+                    release {
+                        storeFile file(release_storefile)
+                        keyAlias release_keyalias
+                        storePassword release_storepassword
+                        keyPassword release_keypassword
+                    }
+                    debug {
+                        storeFile file(release_storefile)
+                        keyAlias release_keyalias
+                        storePassword release_storepassword
+                        keyPassword release_keypassword
+                    }
+                }
+                System.out.println(signingConfigs)
+            } else {
+                signingConfigs {
+                    release {
+                        storeFile file("../singed_keys/debug_signed.jks")
+                        keyAlias "debug_smarteye"
+                        storePassword "123456"
+                        keyPassword "123456"
+                    }
+                    debug {
+                        storeFile file("../singed_keys/debug_signed.jks")
+                        keyAlias "debug_smarteye"
+                        storePassword "123456"
+                        keyPassword "123456"
+                    }
+                }
+
+                System.out.println(signingConfigs)
+                System.out.println("could not find build.properties use default key")
+            }
+        } else {
+            signingConfigs {
+                release {
+                    storeFile file("../singed_keys/debug_signed.jks")
+                    keyAlias "debug_smarteye"
+                    storePassword "123456"
+                    keyPassword "123456"
+                }
+//                debug {
+//                    storeFile file("../singed_keys/debug_signed.jks")
+//                    keyAlias "debug_smarteye"
+//                    storePassword "123456"
+//                    keyPassword "123456"
+//                }
+            }
+        }
+    }
+
+
+    buildTypes {
+        release {
+            //开启混淆
+            minifyEnabled false
+            //打包时自动读取签名配置文件
+            signingConfig signingConfigs.release
+//            //开启zip对齐
+//            zipAlignEnabled true
+//            //移除无用的resource文件
+//            shrinkResources true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //设置release版本的app_name和application_id
+            manifestPlaceholders = [
+                    APP_NAME      : "@string/app_name",
+                    APPLICATION_ID: "@string/application_id"
+            ]
+            //设置release版本只包含armeabi和armeabi-v7a的so包
+            /*  ndk {
+                  abiFilters "armeabi-v7a"
+              }*/
+
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+
+            manifestPlaceholders = [
+                    APP_NAME      : "@string/app_name_debug",
+                    APPLICATION_ID: "@string/application_id_debug"
+            ]
+
+            /* ndk {
+                 abiFilters  "armeabi-v7a", "x86"
+             }*/
+        }
+    }
+
+    externalNativeBuild {
+        ndkBuild {
+            // path 'src/main/jni/Android.mk'
+        }
+    }
+
+    sourceSets {
+        main {
+            jni.srcDirs = ['jnis']//正确写法是 jni.srcDirs = ['jni']
+            jniLibs.srcDirs = ['src/main/jniLibs', 'libs']
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res/layouts/loading',
+                    'src/main/res/layouts/main',
+                    'src/main/res/layouts/countrycode',
+                    'src/main/res/layouts/bindglasses',
+                    'src/main/res/layouts/dialog',
+                    'src/main/res/layouts/mine',
+                    'src/main/res/layouts/function'
+
+            ]
+        }
+    }
+
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES' // will not include DEPENDENCIES file
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'com/vise/utils/BuildConfig'
+        exclude 'com/vise/log/inner/Tree'
+    }
+
+    dexOptions {
+        javaMaxHeapSize "2g"
+    }
+
+    //友盟多渠道打包
+    productFlavors {
+        androidmarket {}
+        //selfdebug {}
+    }
+
+    productFlavors.all { flavor ->
+        flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+
+    useLibrary 'org.apache.http.legacy'
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+
+andResGuard {
+    //mappingFile = file("./resource_mapping.txt")
+    mappingFile = null
+    use7zip = true
+    useSign = true
+    // it will keep the origin path of your resources when it's true
+    keepRoot = false
+
+    whiteList = [
+            // your icon
+            "R.drawable.icon",
+            "R.drawable.ic_launcher*",
+            // for fabric
+            "R.string.com.crashlytics.*",
+            // for google-services
+            "R.string.google_app_id",
+            "R.string.gcm_defaultSenderId",
+            "R.string.default_web_client_id",
+            "R.string.ga_trackingId",
+            "R.string.firebase_database_url",
+            "R.string.google_api_key",
+            "R.string.google_crash_reporting_api_key",
+            // umeng share for sina
+            "R.drawable.sina*",
+            // for umeng update
+            "R.string.umeng*",
+            "R.string.UM*",
+            "R.string.tb_*",
+            "R.string.rc_*",
+            "R.layout.umeng*",
+            "R.layout.tb_*",
+            "R.layout.rc_*",
+            "R.drawable.umeng*",
+            "R.drawable.tb_*",
+            "R.drawable.rc_*",
+            "R.drawable.u1*",
+            "R.drawable.u2*",
+            "R.anim.umeng*",
+            "R.color.umeng*",
+            "R.color.tb_*",
+            "R.color.rc_*",
+            "R.style.*UM*",
+            "R.style.umeng*",
+            "R.style.rc_*",
+            "R.id.umeng*",
+            "R.id.rc_*"
+    ]
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+    ]
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.15'
+        //path = "/usr/local/bin/7za"
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(path: ':viseutils')
+    implementation project(path: ':baseble')
+    implementation project(path: ':xsnow')
+    implementation project(path: ':utilcode')
+    implementation project(path: ':lib-zxing')
+    implementation project(path: ':BaseRecyclerViewAdapterHelper')
+    //implementation project(path: ':FastAdapter')
+    implementation project(path: ':DatePicker')
+    implementation project(path: ':takephoto_library')
+    implementation project(path: ':baselibrary')
+    //compile project(path: ':android-gif-drawable')
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    // bind the layout
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    //annotationProcessor files('libs/butterknife-compiler-10.2.0.jar')
+    //implementation rootProject.ext.dependencies["nordic_dfu"]
+    implementation project(path: ':dfu')
+    implementation 'com.pnikosis:materialish-progress:1.7'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-31'
+    //implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-7'//没有使用特殊Header，可以不加这行
+    //implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.8'
+    //把implementation 用api代替,它是对外部公开的, 所有其他的module就不需要添加该依赖
+    implementation('com.vise.xiaoyaoyou:viselog:1.1.2') {
+        exclude group: 'com.vise.xiaoyaoyou'
+    }
+    implementation(name: 'android-database-sqlcipher-3.5.1', ext: 'aar')
+    //支付宝支付
+    implementation(name: 'alipaySdk-15.7.7-20200702160044', ext: 'aar')
+    implementation(name: 'umeng-asms-armeabi-v1.1.3', ext: 'aar')
+    implementation(name: 'umeng-crash-armeabi-v0.0.4', ext: 'aar')
+    //微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:5.3.1'
+    //常用工具类
+    implementation 'com.huiger:HGUtils:1.2.8.1'
+    implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
+    implementation 'com.contrarywind:Android-PickerView:4.1.9'
+    //bugly
+    implementation 'com.tencent.bugly:crashreport:2.2.0'
+    implementation 'com.tencent.bugly:nativecrashreport:2.2.0'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    //图表
+    implementation 'org.xclcharts:lib:2.4'
+    implementation files('libs/umeng-common-9.1.1.jar')
+    implementation files('libs/umeng-share-core-7.0.3.jar')
+    implementation files('libs/umeng-sharetool-7.0.3.jar')
+    implementation files('libs/umeng-share-wechat-simplify-7.0.3.jar')
+
+    implementation 'cn.jiguang.sdk:jpush:3.6.8'  // 此处以JPush 3.6.8 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.4.0'  // 此处以JCore 2.4.0 版本为例。
+
+}
+
+/*afterEvaluate {
+    tasks.matching {
+        it.name.equals('assembleRelease')
+    }.each { task ->
+        task.dependsOn(resguardRelease)  // 任务依赖：执行task之前需要执行dependsOn指定的任务
+    }
+}*/

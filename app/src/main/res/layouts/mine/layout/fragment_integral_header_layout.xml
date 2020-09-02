@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom">
+
+    <LinearLayout
+        android:id="@+id/function_item_backlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/backimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/fanhui"
+            android:tint="@color/encode_view" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/function_item_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/function_item_backlayout"
+        android:layout_alignBottom="@id/function_item_backlayout"
+        android:layout_centerInParent="true"
+        android:text="视力复查"
+        android:textColor="@color/status_text"
+        android:textSize="@dimen/qrcode_title_text_size"
+        app:autoSizeTextType="uniform" />
+
+    <LinearLayout
+        android:id="@+id/integralconversionrecordlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/function_item_backlayout"
+        android:layout_alignBottom="@id/function_item_backlayout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="25dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/integralconversionrecordbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="兑换记录"
+            android:textColor="@color/top_unsignin_text_color"
+            android:textSize="14dp"
+            android:clickable="false"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/commonproblem_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/wenti"
+            android:gravity="top|center_horizontal"
+            android:layout_marginLeft="15dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/adviseindextv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal|top"
+                android:autoSizeTextType="uniform"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/function_common_problem_recyclerview_item_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="反馈问题内容"
+                android:textColor="@color/time_selected_text_color"
+                android:textSize="@dimen/function_common_proble_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/advisebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:background="@mipmap/yihufu"
+                android:clickable="false"
+                android:gravity="center"
+                android:maxLines="1"
+                android:paddingLeft="3dp"
+                android:visibility="gone"
+                android:paddingRight="3dp"
+                android:scaleType="fitCenter"
+                android:text="已回复"
+                android:textColor="@color/main_background_color"
+                android:textSize="16dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

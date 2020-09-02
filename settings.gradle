@@ -1,0 +1,12 @@
+include ':app',  ':android_common_litesuits', ':viseutils', ':baseble', ':xsnow', ':utilcode', ':BaseRecyclerViewAdapterHelper', ':lib-zxing', ':DatePicker', ':takephoto_library', ':baselibrary', ':dfu'
+project(':android_common_litesuits').projectDir = new File('app/libs/android-common/app')
+project(':viseutils').projectDir = new File('app/libs/ViseUtils/viseutils')
+project(':baseble').projectDir = new File('app/libs/baseble')
+project(':xsnow').projectDir = new File('app/libs/xsnow')
+project(':utilcode').projectDir = new File('app/libs/utilcode')
+project(':lib-zxing').projectDir = new File('app/libs/lib-zxing')
+project(':BaseRecyclerViewAdapterHelper').projectDir = new File('app/libs/BaseRecyclerViewAdapterHelper')
+project(':DatePicker').projectDir = new File('app/libs/DatePicker')
+project(':takephoto_library').projectDir = new File('app/libs/takephoto_library')
+project(':baselibrary').projectDir = new File('app/libs/baselibrary')
+project(':dfu').projectDir = new File('app/libs/dfu')

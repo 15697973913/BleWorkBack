@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RemoteControllerView">
+        <attr name="rcv_text_color" format="color" />
+        <attr name="rcv_shadow_color" format="color" />
+        <attr name="rcv_stroke_color" format="color" />
+        <attr name="rcv_stroke_width" format="dimension" />
+        <attr name="rcv_text_size" format="dimension" />
+        <attr name="rcv_oval_degree" format="integer" />
+    </declare-styleable>
+    <!--7天签到View-->
+    <declare-styleable name="SignInView">
+        <attr name="sign_in_bg_clor" format="color" />
+        <attr name="unsign_in_bg_clor" format="color" />
+        <attr name="sign_in_normal_hollow_circle" format="color" />
+        <attr name="sign_in_pb_clor" format="color" />
+        <attr name="sign_in_check_clor" format="color" />
+        <attr name="sign_in_text_clor" format="color" />
+        <attr name="sign_in_text_size" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomButton">
+        <attr name="normalbackground" format="reference" />
+        <attr name="pressedbackground" format="reference" />
+        <attr name="normaltextcolor" format="color" />
+        <attr name="pressedtextcolor" format="color" />
+        <attr name="unclickablebackground" format="reference"/>
+        <attr name="unclickabletextcolor" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <!--    开关按钮CustomSwitch的样式定义-->
+    <declare-styleable name="CustomSwitch">
+        <attr name="closeText" format="string" />
+        <attr name="openText" format="string" />
+        <attr name="closeColor" format="color" />
+        <attr name="openColor" format="color" />
+        <attr name="customWidth" format="integer" />
+        <attr name="customHeight" format="integer" />
+    </declare-styleable>
+
+</resources>

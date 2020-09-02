@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:minHeight="420dp"
+            android:background="@drawable/view_bg_top_to_bottom_blue">
+
+            <!-- 头像，姓名 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="RelativeOverlap,RtlHardcoded,UseCompoundDrawables">
+
+                <com.zj.zhijue.view.circleimageview.CircleImageView
+                    android:id="@+id/ivAvatar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    tools:ignore="ContentDescription"
+                    tools:src="@mipmap/qidongtubiao" />
+
+
+                <TextView
+                    android:id="@+id/trainusernametext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="#ffffffff"
+                    android:textSize="15sp"
+                    tools:ignore="RtlHardcoded"
+                    tools:text="张三" />
+
+            </LinearLayout>
+
+            <!-- 蓝牙连接开关 -->
+            <Switch
+                android:id="@+id/connectSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:thumb="@drawable/switch_custom_thumb_selector"
+                android:track="@drawable/switch_custom_track_selector"
+                tools:ignore="RtlHardcoded" />
+
+            <!-- 蓝牙连接状态 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="17dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="55dp"
+                android:background="@drawable/res_round_wihte_28"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="RelativeOverlap,RtlHardcoded">
+
+                <ImageView
+                    android:id="@+id/ic_ble_disconnect"
+                    android:layout_width="9dp"
+                    android:layout_height="11dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_ble_disconnect"
+                    tools:ignore="ContentDescription,RtlHardcoded" />
+
+                <TextView
+                    android:id="@+id/bleconnectstatustv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/ble_disconnect"
+                    android:textColor="#ffff6666"
+                    android:textSize="10sp"
+                    tools:ignore="RtlHardcoded" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivElectricity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:src="@mipmap/ic_electricity5"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_marginTop="75dp"/>
+
+
+
+            <!-- 切换模式 -->
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="52dp"
+                android:background="@drawable/res_round_white_20_0_20_0"
+                android:minHeight="30dp"
+                tools:ignore="RtlHardcoded">
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/trainmodespinner"
+                    style="@style/trainmode_spinner_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:dropDownWidth="match_parent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown" />
+
+            </RelativeLayout>
+
+            <!-- 今日训练时长 -->
+            <RelativeLayout
+                android:layout_width="255dp"
+                android:layout_height="255dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="75dp"
+                android:background="@drawable/circle_shape_blue_transparent">
+
+                <RelativeLayout
+                    android:layout_width="235dp"
+                    android:layout_height="235dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_shape_blue_transparent">
+
+                    <RelativeLayout
+                        android:layout_width="230dp"
+                        android:layout_height="230dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_shape_blue_transparent">
+
+                        <RelativeLayout
+                            android:layout_width="210dp"
+                            android:layout_height="210dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/circle_shape_wihte">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="48dp"
+                                android:text="今日训练时长"
+                                android:textColor="#ff3a58fd"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/tvCurDayTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginTop="94dp"
+                                android:textColor="#ff3a5afd"
+                                android:textSize="18sp"
+                                tools:text="00小时20分30秒" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_center"
+                android:layout_width="1dp"
+                android:layout_height="1dp"
+                android:layout_centerHorizontal="true" />
+
+            <!-- 训练总时长 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="6dp"
+                android:layout_toLeftOf="@id/view_center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="18dp"
+                    android:background="@drawable/ic_training_alltime"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="训练总时长"
+                    android:textColor="#ffffffff"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/traintotalTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_horizontal"
+                    tools:text="00天\n00小时00分00秒"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- 剩余训练时长 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="6dp"
+                android:layout_toRightOf="@id/view_center"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                tools:ignore="RtlHardcoded">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/ic_training_remaining_time"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="剩余训练时长"
+                    android:textColor="#ffffffff"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tvTimeRemaining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_horizontal"
+                    android:text="00天\n00小时00分00秒"
+                    android:textColor="#ffffffff"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_weight="1.1"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="0dp">
+
+            <!-- 蓝牙控制 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <!-- 开始,停止 -->
+                <LinearLayout
+                    android:id="@+id/llBleStartAndStop"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_shape_type_start"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:id="@+id/ivBleStartAndStop"
+                        android:layout_width="16dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_ble_type_start"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvBleStartAndStop"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="开始"
+                        android:textColor="#ff384dfe"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <!-- 干预 -->
+                <LinearLayout
+                    android:id="@+id/llBleIntervene"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/circle_shape_type_intervene"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <ImageView
+                        android:id="@+id/ivBleIntervene"
+                        android:layout_width="16dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_ble_type_intervene"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvBleIntervene"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="干预"
+                        android:textColor="#FFA61B"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <!-- 暂停，继续 -->
+                <LinearLayout
+                    android:id="@+id/llBlePauseAndContinue"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:background="@drawable/circle_shape_type_pause"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    tools:ignore="RtlHardcoded,UselessParent">
+
+                    <ImageView
+                        android:id="@+id/ivBlePauseAndContinue"
+                        android:layout_width="16dp"
+                        android:layout_height="18dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ic_ble_type_pause"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+                        android:id="@+id/tvBlePauseAndContinue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="暂停"
+                        android:textColor="#FF3000"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

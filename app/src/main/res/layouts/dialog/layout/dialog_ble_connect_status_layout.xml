@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/mainrelativelayout"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:background="@drawable/white_radius_shape"
+        android:gravity="center">
+
+        <include layout="@layout/dialog_ble_connect_status_content" android:id="@+id/ble_connectinglayout" android:visibility="gone"/>
+        <include layout="@layout/dialog_ble_connect_success_content" android:id="@+id/ble_connect_successlayout" android:visibility="gone"/>
+        <include layout="@layout/dialog_ble_connect_fail_content" android:id="@+id/dialog_ble_connect_fail_content" android:visibility="visible"/>
+        <include layout="@layout/dialog_ble_device_list_content"  android:id="@+id/dialog_ble_search_content" android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

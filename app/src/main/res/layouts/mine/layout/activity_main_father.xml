@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bleglasses_main_bg_color"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical|left">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/wenti"
+            android:gravity="top|center_horizontal"
+            android:layout_marginLeft="10dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/problemindextv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="5dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center_horizontal|top" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/alarm_clock_father_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical|left"
+            android:padding="10dp"
+            android:textColor="@color/toolbar_title_text_color"
+            android:textSize="@dimen/mine_common_problem_title_text_size" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/group_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="3dp"
+        android:contentDescription="@null" />
+
+</LinearLayout>

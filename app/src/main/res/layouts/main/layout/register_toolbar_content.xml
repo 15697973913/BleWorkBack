@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical" >
+
+   <LinearLayout
+       android:id="@+id/backlayout"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:gravity="left|center_vertical"
+       android:layout_centerVertical="true"
+       android:layout_alignParentLeft="true">
+
+       <ImageView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/fanhui"
+           android:layout_marginLeft="20dp"/>
+
+   </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/register_titletv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机注册"
+            android:autoSizeTextType="none"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/bleglasses_main_control_title"/>
+
+    </LinearLayout>
+    
+
+
+</RelativeLayout>

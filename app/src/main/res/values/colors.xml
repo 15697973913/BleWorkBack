@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3A5AFD</color>
+    <color name="colorPrimaryDark">#3A5AFD</color>
+    <color name="colorAccent">#3A5AFD</color>
+    <color name="bg_color">#ededed</color>
+    <color name="bg_gray">#f2f2f2</color>
+    <color name="bg_grey">#f2f2f2</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#6bacf4</color>
+    <color name="white">#ffffff</color>
+
+    <!-- 登录-->
+    
+
+    <color name="login_title">#333333</color>
+    <color name="login_account_text_color">#666666</color>
+    <color name="login_background">#ffffff</color>
+    <color name="login_phone_click">#0BA6F1</color>
+    <color name="confirm_connect_text_color">#345efe</color>
+    
+    
+    <color name="id_card_number">#b0b0b0</color>
+    <color name="control_main_color">#f2f2f2</color>
+    <color name="control_selected_scenario">#999999</color>
+    <color name="control_intervene_text_color">#649ffe</color>
+
+    <!-- 新版本 UI  -->
+
+    <color name="main_background_color">#ffffff</color>
+    <color name="assit_almost_button_color">#0BA6F1</color>
+    <color name="assit_all_edit_background_color">#F1F1F1</color>
+    <color name="assit_view_division_color">#F6F6F6</color>
+    
+    <color name="time_selected_text_color">#000000</color>
+    <color name="toolbar_title_text_color">#333333</color>
+    <color name="main_body_text_color">#666666</color>
+    <color name="unclickable_text_color">#BCC8D7</color>
+
+    <color name="green_light_color">#3BC06B</color>
+    <color name="blue_dark_color">#04BFCE</color>
+    <color name="blue_light_color">#D2F0FF</color>
+    <color name="orange_light_color">#FFBE26</color>
+    <color name="red_dard_color">#FC5B24</color>
+    <color name="blue_light_translate_color">#EEF9FF</color>
+    <color name="red_dard_hard_color">#F12528</color>
+    <color name="green_light_translate_color">#19D88B</color>
+
+    <color name="next_text_color">#EEEEEE</color>
+    <color name="edittext_backgroun_color">#F1F1F1</color>
+    
+    <color name="nuoyafangzhou_title_text_color">#333333</color>
+    <color name="gray">#f9a4a3a3</color>
+
+
+    <!-- 周视图-->
+    <color name="leftColor">#a1de89</color>
+    <color name="rightColor">#f7e494</color>
+    <color name="rightBottomColor">#f7d194</color>
+    <color name="leftColorBottom">#D2F0FF</color>
+    <color name="backgroundlineColor">#D2F0FF</color>
+    <color name="selectLeftColor">#0BA6F1</color>
+    <color name="selectRightColor">#f8935c</color>
+    <color name="xyColor">#000000</color>
+
+    <!-- 7天签到View-->
+
+    <color name="arsc_circle_color">#F6F6F6</color>
+    <color name="top_unsignin_circle_color">#D2F0FF</color>
+    <color name="top_signin_circle_color">#0BA6F1</color>
+    <color name="top_unsignin_text_color">#FFFFFF</color>
+    <color name="top_signin_text_color">#FFFFFF</color>
+    <color name="center_unsignin_inner_circle_color">#CCCCCC</color>
+    <color name="center_signin_inner_circle_color">#FFFFFF</color>
+    <color name="center_unsignin_hollow_circle_color">#F6F6F6</color>
+    <color name="center_signin_hollow_circle_color">#0BA6F1</color>
+    <color name="bottom_text_color">#333333</color>
+    <color name="operation_stop_circle_color">#ff0a0a</color>
+    <color name="operation_pause_circle_color">#0BA6F1</color>
+    <color name="operation_ganyu_circle_color">#0EC3D1</color>
+    <color name="indicator_text_normal_color">#374CFF</color>
+
+
+    <!-- 新版本 UI 2019.4.16 -->
+
+    <color name="login_button_bg_color">#7fcdf2</color>
+    <color name="login_title_text_color">#000000</color>
+    <color name="passwd_unline_text_color">#dcdddd</color>
+    <color name="login_forget_passswd_tip_textcolor">#999999</color>
+    <color name="get_verify_code_color">#6fb8ff</color>
+    <color name="register_bg_color">#e6e6e6</color>
+    <color name="optomtry_data_divider_color">#b3b3b3</color>
+    <color name="train_mode_text_color">#0000ff</color>
+    <color name="train_status_text_color">#003399</color>
+    <color name="train_status_disconnect_text_color">#ff0000</color>
+    <color name="ble_connect_success_title_text_color">#374CFF</color>
+    <color name="ble_connect_fail_title_text_color">#000000</color>
+    <color name="function_header_bg">#00ffffff</color>
+    <color name="interverne_key_header_bg_color">#ff7b61</color>
+    <color name="common_problem_header_bg_color">#fccf14</color>
+    <color name="recharge_money_item_bg_color">#ffb761</color>
+    <color name="form_report_title_bg_color">#6c88f9</color>
+
+    <color name="bleglasses_main_control_title">#000000</color>
+    <color name="bleglasses_main_top_bg_color">#3A5AFE</color>
+    <color name="bleglasses_yanguang_input_text_color">#3A5AFE</color>
+    <color name="bleglasses_main_bg_color">#FFFFFF</color>
+    <color name="bleglasses_mode_text_color">#9a9a9a</color>
+    <color name="bleglasses_mode_middle_bg_color">#fafafa</color>
+    <color name="main_bottom_unselected_text_color">#BCC8D7</color>
+    <color name="blelgasses_main_control_view_bg">#ffffff</color>
+    <color name="blelgasses_main_control_view_line_color">#c0c0c0</color>
+
+    <color name="bleglasses_register_divide_line_color">#f5f6f7</color>
+    <color name="bleglasses_register_hint_text_color">#999999</color>
+    <color name="left_eye_sight_color">#6fb8ff</color>
+    <color name="star_light_color">#6fb8ff</color>
+    <color name="right_eye_sight_color">#374CFF</color>
+    <color name="review_data_line_color">#666666</color>
+    <color name="review_data_text_color">#666666</color>
+    <color name="bleglasses_mine_item_bg_color">#ffffff</color>
+    <color name="bleglasses_mine_item_divide_color">#e5e5e5</color>
+    <color name="bleglasses_form_report_week_dy_height__color">#e5e5e5</color>
+    <color name="battery_color">#353535</color>
+    <color name="dialog_divider">#CCCCCC</color>
+    <color name="switch_color">#08c061</color>
+    <color name="res_color_blue_374cff">#374CFF</color>
+    <color name="res_color_blue_3b56fd">#3B56FD</color>
+
+    <color name="color_background">#F0F0F0</color>
+    <color name="color_FAD961">#FAD961</color>
+    <color name="color_F76B1C">#F76B1C</color>
+
+</resources>

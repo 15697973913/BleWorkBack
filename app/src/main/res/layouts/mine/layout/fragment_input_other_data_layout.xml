@@ -1,0 +1,1016 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom|center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/toolbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/bleglasses_main_top_bg_color"
+        android:gravity="bottom"
+        android:paddingTop="5dp">
+
+        <include layout="@layout/fragment_review_data_header_layout" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:background="@color/blelgasses_main_control_view_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@color/bleglasses_main_bg_color"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="10dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|left"
+                                android:layout_marginLeft="0dp"
+                                android:autoSizeMaxTextSize="@dimen/optometry_center_text_size"
+                                android:autoSizeMinTextSize="14dp"
+                                android:gravity="right"
+                                android:maxLines="1"
+                                android:text="姓名："
+                                android:textColor="@color/time_selected_text_color"
+                                android:textSize="@dimen/optometry_center_text_size"
+                                app:autoSizeTextType="none" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|left">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/top_unsignin_text_color"
+                                    android:gravity="center">
+
+                                    <androidx.appcompat.widget.AppCompatEditText
+                                        android:id="@+id/inputotherdatausernametextview"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical|left"
+                                        android:paddingTop="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginRight="10dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:autoSizeMaxTextSize="@dimen/optometry_center_text_size"
+                                        android:autoSizeMinTextSize="14dp"
+                                        android:autoSizeTextType="uniform"
+                                        android:background="@null"
+                                        android:gravity="center_vertical"
+                                        android:hint="请输入姓名"
+                                        android:inputType="text"
+                                        android:maxLines="1"
+                                        android:textColor="@color/bleglasses_yanguang_input_text_color"
+                                        android:textColorHint="@color/passwd_unline_text_color"
+                                        android:textCursorDrawable="@drawable/cursor_color"
+                                        android:textSize="@dimen/optometry_center_text_size" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:minWidth="50dp"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical|left"
+                                    android:layout_marginLeft="10dp"
+                                    android:autoSizeMaxTextSize="@dimen/optometry_center_text_size"
+                                    android:autoSizeMinTextSize="14dp"
+                                    android:maxLines="1"
+                                    android:text="性别："
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size"
+                                    app:autoSizeTextType="uniform" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/top_unsignin_text_color"
+                                    android:gravity="center">
+
+                                    <androidx.appcompat.widget.AppCompatSpinner
+                                        android:id="@+id/sexspinner"
+                                        style="@style/spinner_style"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:dropDownWidth="match_parent"
+                                        android:gravity="center"
+                                        android:spinnerMode="dropdown"
+                                        app:autoSizeTextType="uniform">
+
+                                    </androidx.appcompat.widget.AppCompatSpinner>
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.2" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bleglasses_main_bg_color">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/bleglasses_register_divide_line_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@color/bleglasses_main_bg_color"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_marginLeft="10dp"
+                            android:autoSizeMaxTextSize="@dimen/optometry_center_text_size"
+                            android:autoSizeMinTextSize="14dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="身份证："
+                            android:textColor="@color/time_selected_text_color"
+                            android:textSize="@dimen/optometry_center_text_size"
+                            app:autoSizeTextType="uniform" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/top_unsignin_text_color"
+                            android:gravity="center">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/inputotherdatabirthdaydatetextview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|left"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:autoSizeMaxTextSize="@dimen/optometry_center_text_size"
+                                android:autoSizeMinTextSize="14dp"
+                                android:autoSizeTextType="uniform"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="请输入身份证号"
+                                android:inputType="number"
+                                android:maxLength="18"
+                                android:maxLines="1"
+                                android:textColor="@color/bleglasses_yanguang_input_text_color"
+                                android:textColorHint="@color/passwd_unline_text_color"
+                                android:textCursorDrawable="@drawable/cursor_color"
+                                android:textSize="@dimen/optometry_center_text_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.2" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/bleglasses_main_bg_color">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2px"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:background="@color/bleglasses_register_divide_line_color" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/bleglasses_main_bg_color"
+                        android:gravity="center_vertical|left"
+                        android:orientation="horizontal"
+                        android:paddingLeft="15dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|left"
+                            android:layout_marginLeft="10dp"
+                            android:autoSizeMaxTextSize="@dimen/optometry_center_text_size"
+                            android:autoSizeMinTextSize="14dp"
+                            android:gravity="right"
+                            android:maxLines="1"
+                            android:text="手机号："
+                            android:textColor="@color/time_selected_text_color"
+                            android:textSize="@dimen/optometry_center_text_size"
+                            app:autoSizeTextType="uniform" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/top_unsignin_text_color"
+                            android:gravity="center">
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/inputotherdatamobilephonetextview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical|left"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="0dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:autoSizeMaxTextSize="@dimen/optometry_center_text_size"
+                                android:autoSizeMinTextSize="14dp"
+                                android:autoSizeTextType="uniform"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:hint="请输入手机号"
+                                android:inputType="phone"
+                                android:maxLength="11"
+                                android:maxLines="1"
+                                android:textColor="@color/bleglasses_yanguang_input_text_color"
+                                android:textColorHint="@color/passwd_unline_text_color"
+                                android:textCursorDrawable="@drawable/cursor_color"
+                                android:textSize="@dimen/optometry_center_text_size" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.2" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.5"
+                        android:visibility="gone"
+
+                        android:gravity="center_horizontal|top"
+                        android:orientation="vertical"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="眼睛状况"
+                            android:textColor="@color/bleglasses_main_control_title"
+                            android:textSize="@dimen/optometry_center_text_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:layout_weight="1"
+                            android:background="@color/bleglasses_main_bg_color"
+                            android:gravity="center"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp">
+
+                            <RadioGroup
+                                android:id="@+id/eyestatusradiogroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/shortsightednesssradiobutton"
+                                    style="@style/eyestatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="left|center_vertical"
+                                    android:text="近视"
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="1"
+                                    android:visibility="invisible" />
+
+                                <RadioButton
+                                    android:id="@+id/presbyopiasightednesssradiobutton"
+                                    style="@style/eyestatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="老花"
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="1"
+                                    android:visibility="invisible" />
+
+                                <RadioButton
+                                    android:id="@+id/longsightednesssradiobutton"
+                                    style="@style/eyestatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="远视"
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="1"
+                                    android:visibility="invisible" />
+
+
+                                <RadioButton
+                                    android:id="@+id/weaksightednesssradiobutton"
+                                    style="@style/eyestatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="right|center_vertical"
+                                    android:text="弱视"
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+                            </RadioGroup>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="度数设置"
+                            android:textColor="@color/bleglasses_main_control_title"
+                            android:textSize="@dimen/optometry_center_text_size" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/bleglasses_main_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|left"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="左眼(OS)："
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/inputotherdatalefteyerefraction"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/top_unsignin_text_color"
+                                    android:gravity="left|center_vertical"
+                                    android:hint=""
+                                    android:inputType="number"
+                                    android:maxLength="3"
+                                    android:minLines="1"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="10dp"
+                                    android:textColor="@color/bleglasses_yanguang_input_text_color"
+                                    android:textColorHint="@color/passwd_unline_text_color"
+                                    android:textCursorDrawable="@drawable/cursor_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/eyesight_limit_text"
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bleglasses_main_bg_color">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/bleglasses_register_divide_line_color" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/bleglasses_main_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|left"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="右眼(OD)："
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/inputotherdatarighteyerefraction"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/top_unsignin_text_color"
+                                    android:gravity="left|center_vertical"
+                                    android:hint=""
+                                    android:inputType="number"
+                                    android:maxLength="3"
+                                    android:minLines="1"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="10dp"
+                                    android:textColor="@color/bleglasses_yanguang_input_text_color"
+                                    android:textColorHint="@color/passwd_unline_text_color"
+                                    android:textCursorDrawable="@drawable/cursor_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/eyesight_limit_text"
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center"
+                            android:text="散光设置"
+                            android:textColor="@color/bleglasses_main_control_title"
+                            android:textSize="@dimen/optometry_center_text_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="@color/bleglasses_main_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|left"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="左眼(OS)："
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/inputotherdatalefteyeastigmatism"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/top_unsignin_text_color"
+                                    android:gravity="left|center_vertical"
+                                    android:hint=""
+                                    android:inputType="numberSigned|numberDecimal"
+                                    android:maxLength="3"
+                                    android:minLines="1"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="10dp"
+                                    android:textColor="@color/bleglasses_yanguang_input_text_color"
+                                    android:textColorHint="@color/passwd_unline_text_color"
+                                    android:textCursorDrawable="@drawable/cursor_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/eye_atigmatism_limit_text"
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bleglasses_main_bg_color">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/bleglasses_register_divide_line_color" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/bleglasses_main_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|left"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="轴向："
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/inputotherdatalefteyeaxialeidttext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/top_unsignin_text_color"
+                                    android:gravity="left|center_vertical"
+                                    android:hint="@string/eye_axial_text"
+                                    android:inputType="number"
+                                    android:maxLength="3"
+                                    android:minLines="1"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="10dp"
+                                    android:textColor="@color/bleglasses_yanguang_input_text_color"
+                                    android:textColorHint="@color/passwd_unline_text_color"
+                                    android:textCursorDrawable="@drawable/cursor_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bleglasses_main_bg_color">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/bleglasses_register_divide_line_color" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/bleglasses_main_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|left"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="右眼(OD)："
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/inputotherdatarighteyeastigmatism"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/top_unsignin_text_color"
+                                    android:gravity="left|center_vertical"
+                                    android:hint=""
+                                    android:inputType="number"
+                                    android:maxLength="3"
+                                    android:minLines="1"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="10dp"
+                                    android:textColor="@color/bleglasses_yanguang_input_text_color"
+                                    android:textColorHint="@color/passwd_unline_text_color"
+                                    android:textCursorDrawable="@drawable/cursor_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical|right"
+                                android:visibility="gone">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/eye_atigmatism_limit_text"
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/bleglasses_main_bg_color">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2px"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/bleglasses_register_divide_line_color" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="1"
+                            android:background="@color/bleglasses_main_bg_color"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|left"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="轴向："
+                                    android:textColor="@color/time_selected_text_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+
+                                <androidx.appcompat.widget.AppCompatEditText
+                                    android:id="@+id/inputotherdatarighteyeaxialeidttext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:background="@color/top_unsignin_text_color"
+                                    android:gravity="left|center_vertical"
+                                    android:hint="@string/eye_axial_text"
+                                    android:inputType="numberSigned"
+                                    android:maxLength="3"
+                                    android:minLines="1"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingRight="5dp"
+                                    android:paddingBottom="10dp"
+                                    android:textColor="@color/bleglasses_yanguang_input_text_color"
+                                    android:textColorHint="@color/passwd_unline_text_color"
+                                    android:textCursorDrawable="@drawable/cursor_color"
+                                    android:textSize="@dimen/optometry_center_text_size" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/bleglasses_main_bg_color"
+                            android:gravity="center_vertical|left"
+                            android:minHeight="40dp"
+                            android:orientation="horizontal"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="瞳距(mm)："
+                                android:textColor="@color/time_selected_text_color"
+                                android:textSize="@dimen/optometry_center_text_size" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/interpupillarydistanceedittext"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/top_unsignin_text_color"
+                                android:gravity="left|center_vertical"
+                                android:hint=""
+                                android:inputType="number"
+                                android:maxLength="2"
+                                android:minLines="1"
+                                android:paddingLeft="5dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="5dp"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/bleglasses_yanguang_input_text_color"
+                                android:textColorHint="@color/passwd_unline_text_color"
+                                android:textCursorDrawable="@drawable/cursor_color"
+                                android:textSize="@dimen/optometry_center_text_size" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/inputotherdata_complete_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginLeft="24dp"
+                            android:layout_marginRight="24dp"
+                            android:background="@drawable/res_round_blue_4"
+                            android:gravity="center"
+                            android:text="提交"
+                            android:textColor="@color/top_unsignin_text_color"
+                            android:textSize="@dimen/register_send_verify_code_text_size" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+      <TextView
+          android:id="@+id/sextextview"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textColor="@color/bleglasses_register_hint_text_color"
+          android:textSize="@dimen/blelgasses_train_mode_item_text_size"
+          android:text="训练模式"
+          android:paddingLeft="10dp"
+          android:paddingRight="10dp"
+          android:paddingTop="10dp"
+          android:paddingBottom="10dp"/>
+
+   </LinearLayout>
+
+</LinearLayout>
